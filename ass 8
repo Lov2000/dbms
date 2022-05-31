@@ -1,0 +1,24 @@
+CREATE TABLE Personsss (
+    Empid varchar2(3) PRIMARY KEY ,
+    EName varchar2(25) NOT NULL,
+    DOB Date NOT NULL,
+		DOJ Date NOT NULL,
+    Salary number(7) NOT NULL,
+		constraint ss check( empid LIKE 'E%'),
+		constraint s1 check(dob>doj),
+		constraint s2 check(salary>0)
+		
+);
+
+insert into personss values('E1','John',TO_Date'02-NOV-1999','02-OCT-2015','5000');
+insert into personss values('E2','Ben','03-NOV-1999','03-OCT-2015','5000');
+insert into personss values('E3','Guen','04-NOV-1999','04-OCT-2015','5000');
+insert into personss values('E4','Kevin','05-NOV-1999','05-OCT-2015','5000');
+insert into personss values('E5','Bill','06-NOV-1999','06-OCT-2015','5000');
+insert into personss values('E6','Billi','06-NOV-1999','06-OCT-2019','5000');
+
+select * from personss where to_char(doj,'dd-mm-yyy')-'22-02-1991'
+select * from personss where to_char(doj,'yyyy')>'2018';
+select * from dual where to_char(doj,'mom-dd-yyyy')-'feb-22-1991';
+
+select * from datedemo where to_char(doj,'mom-dd-yyyy')='22-02-1991';
