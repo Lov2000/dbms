@@ -23,7 +23,7 @@ WHERE  DOJ='01-Apr-2015';
 -- 2
 SELECT EmpID,
        Ename,     
-			 to_char(DOJ,'MONTH DD YYYY')
+       to_char(DOJ,'MONTH DD YYYY')
 FROM employees;
 
 
@@ -45,7 +45,6 @@ WHERE to_char(DOJ, 'mon')='jan';
 SELECT *
 FROM employees
 WHERE to_char(DOJ,'yyyy')=2019; 
-
 
 -- 6
 
@@ -74,4 +73,3 @@ SELECT *
 FROM employees
 WHERE to_char(DOJ,'MON') NOT IN ('FEB');
 
--- 11
