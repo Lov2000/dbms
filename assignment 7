@@ -7,7 +7,6 @@ insert into saqlesman values(5007,'Paul Adam','Rome',0.13)
 insert into saqlesman values(5003,'Lauson Hen','San Jose',0.12)
 select * from saqlesman
 
-
 create table Customer(Customer_id number(6), Cust_Name varchar(30), City VARCHAR(10),Grade number(5),Salesman_id number(5))
 insert into Customer values(3002,'Nick Rimando','New York',100,5001)
 insert into Customer values(5001,'Brad Davis','New York',200,5001)
